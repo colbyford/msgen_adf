@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "97c85713-0ce7-47c8-9f0a-072e61e66338",
+		"_postman_id": "282f2389-448d-42b9-9e12-8efb652d3232",
 		"name": "Microsoft Genomics service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -56,7 +56,7 @@
 				}
 			},
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
@@ -74,8 +74,12 @@
 						"value": "Microsoft Genomics Command-line Client"
 					}
 				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"WorkflowClass\": \"\",\n    \"OutputStorageType\": \"AZURE_BLOCK_BLOB\",\n    \"Description\": \"Custom description (cford-postman)\",\n    \"OutputArgs\": {\n        \"ACCOUNT\": \"genomicsdls\",\n        \"CONTAINER\": \"msgen-test\",\n        \"CONTAINER_SAS\": \"sr=c&sp=rwd&sig=VJcgimiuq5YabWo5GQewmx2XOzcy4fb0V84K0w5rgXU%3D&sv=2015-07-08&se=2021-01-25T22%3A07%3A35Z\",\n        \"OUTPUT_INCLUDE_LOGFILES\": true,\n        \"OVERWRITE\": \"false\",\n        \"OUTPUT_FILENAME_BASE\": \"\"\n    },\n    \"ProcessArgs\": \"R=hg19m1\",\n    \"Process\": \"snapgatk\",\n    \"OptionalArgs\": {},\n    \"InputArgs\": {\n        \"BLOBNAMES_WITH_SAS\": \"chr21_1.fq.gz?sr=b&sp=r&sig=yuKxIHHJxPpshv73Y0CLJAK2t0icfvCqERp4oS8c%2BjU%3D&sv=2015-07-08&se=2021-01-25T22%3A07%3A34Z,chr21_2.fq.gz?sr=b&sp=r&sig=Z8I%2Bzf8HfEIgYtJJp6eV1AI3Owt5vbSAZMACEDOnLiw%3D&sv=2015-07-08&se=2021-01-25T22%3A07%3A34Z,\",\n        \"ACCOUNT\": \"genomicsdls\",\n        \"CONTAINER\": \"msgen-test\",\n        \"BLOBNAMES\": \"chr21_1.fq.gz,chr21_2.fq.gz,\"\n    },\n    \"InputStorageType\": \"AZURE_BLOCK_BLOB\",\n    \"IgnoreAzureRegion\": null\n}"
+				},
 				"url": {
-					"raw": "https://eastus.microsoftgenomics.net/api/workflows/?Process=snapgatk&ProcessArgs=R=hg19m1&Description=Custom description (cford)&InputStorageType=AZURE_BLOCK_BLOB&OutputStorageType=AZURE_BLOCK_BLOB&InputArgs&OutputArgs",
+					"raw": "https://eastus.microsoftgenomics.net/api/workflows/",
 					"protocol": "https",
 					"host": [
 						"eastus",
@@ -86,55 +90,11 @@
 						"api",
 						"workflows",
 						""
-					],
-					"query": [
-						{
-							"key": "Process",
-							"value": "snapgatk"
-						},
-						{
-							"key": "ProcessArgs",
-							"value": "R=hg19m1"
-						},
-						{
-							"key": "Description",
-							"value": "Custom description (cford)"
-						},
-						{
-							"key": "InputStorageType",
-							"value": "AZURE_BLOCK_BLOB"
-						},
-						{
-							"key": "OutputStorageType",
-							"value": "AZURE_BLOCK_BLOB"
-						},
-						{
-							"key": "InputArgs",
-							"value": null
-						},
-						{
-							"key": "OutputArgs",
-							"value": null
-						},
-						{
-							"key": "OptionalArgs",
-							"value": null,
-							"disabled": true
-						},
-						{
-							"key": "WorkflowClass",
-							"value": null,
-							"disabled": true
-						},
-						{
-							"key": "IgnoreAzureRegion",
-							"value": null,
-							"disabled": true
-						}
 					]
 				}
 			},
 			"response": []
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
