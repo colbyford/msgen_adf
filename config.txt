@@ -1,0 +1,41 @@
+# Microsoft Genomics service - Command Line Interface - Configuration File
+#
+# Documentation: https://docs.microsoft.com/azure/genomics/ 
+#
+# Instructions
+# 1.  Entries are provided in key - value pairs, like key: value
+# 2.  Whitespace (tabs, spaces) don't matter
+# 3.  Lines starting with # are ignored
+#
+# Example usage:
+#
+# pip install msgen
+# msgen submit -f c:\temp\config.txt -b1 sample_1.fq.gz -b2 sample_2.fq.gz
+# msgen submit -f c:\temp\config.txt -b1 sample.bam
+
+api_url_base:                        https://eastus.microsoftgenomics.net
+access_key:                          b999a06499c04556b217ed39801e5801
+
+# Other available references (replace hg19m1 below): b37m1, hg19m1, hg38m1, hg38m1x
+process_args:                        R=hg19m1
+
+# Uncomment the appropriate process_name
+process_name:                        snapgatk
+#process_name:                        gatk4
+
+poll:                                false
+
+# To learn more about the optional "emit_ref_confidence" argument, see https://github.com/microsoft/msgen#release-notes-v080 
+# Uncomment the "emit_ref_confidence" argument below to produce "g.vcf" outputs.
+#emit_ref_confidence:                gvcf
+
+# To learn more about the optional "bgzip_output" argument, see https://github.com/microsoft/msgen#release-notes-v090 
+# Uncomment the "bgzip_output" argument below to produce "*.vcf.gz" and "*.vcf.gz.tbi" outputs.
+#bgzip_output:                true
+
+input_storage_account_name:          
+input_storage_account_key:           
+input_storage_account_container:     
+output_storage_account_name:         
+output_storage_account_key:          
+output_storage_account_container:    

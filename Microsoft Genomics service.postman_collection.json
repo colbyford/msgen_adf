@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "97c85713-0ce7-47c8-9f0a-072e61e66338",
+		"name": "Microsoft Genomics service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Workflows",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "b999a06499c04556b217ed39801e5801",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Microsoft Genomics Command-line Client",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://eastus.microsoftgenomics.net/api/workflows/",
+					"protocol": "https",
+					"host": [
+						"eastus",
+						"microsoftgenomics",
+						"net"
+					],
+					"path": [
+						"api",
+						"workflows",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Workflow",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "b999a06499c04556b217ed39801e5801"
+					},
+					{
+						"key": "User-Agent",
+						"type": "text",
+						"value": "Microsoft Genomics Command-line Client"
+					}
+				],
+				"url": {
+					"raw": "https://eastus.microsoftgenomics.net/api/workflows/?Process=snapgatk&ProcessArgs=R=hg19m1&Description=Custom description (cford)&InputStorageType=AZURE_BLOCK_BLOB&OutputStorageType=AZURE_BLOCK_BLOB&InputArgs&OutputArgs",
+					"protocol": "https",
+					"host": [
+						"eastus",
+						"microsoftgenomics",
+						"net"
+					],
+					"path": [
+						"api",
+						"workflows",
+						""
+					],
+					"query": [
+						{
+							"key": "Process",
+							"value": "snapgatk"
+						},
+						{
+							"key": "ProcessArgs",
+							"value": "R=hg19m1"
+						},
+						{
+							"key": "Description",
+							"value": "Custom description (cford)"
+						},
+						{
+							"key": "InputStorageType",
+							"value": "AZURE_BLOCK_BLOB"
+						},
+						{
+							"key": "OutputStorageType",
+							"value": "AZURE_BLOCK_BLOB"
+						},
+						{
+							"key": "InputArgs",
+							"value": null
+						},
+						{
+							"key": "OutputArgs",
+							"value": null
+						},
+						{
+							"key": "OptionalArgs",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "WorkflowClass",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "IgnoreAzureRegion",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
