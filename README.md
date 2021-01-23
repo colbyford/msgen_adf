@@ -1,2 +1,2 @@
-# msgen_adf
-Azure Data Factory pipeline for the Microsoft Genomics service.
+# msgen - Azure Data Factory
+Azure Data Factory pipeline for interfacing with the Microsoft Genomics service API.
