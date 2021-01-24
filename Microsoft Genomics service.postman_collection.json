@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "282f2389-448d-42b9-9e12-8efb652d3232",
+		"_postman_id": "587ba191-34b5-4c00-a275-920f03322dde",
 		"name": "Microsoft Genomics service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -94,7 +94,92 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get Workflow Status",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "b999a06499c04556b217ed39801e5801",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Microsoft Genomics Command-line Client",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://eastus.microsoftgenomics.net/api/workflows/10001",
+					"protocol": "https",
+					"host": [
+						"eastus",
+						"microsoftgenomics",
+						"net"
+					],
+					"path": [
+						"api",
+						"workflows",
+						"10001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Workflow",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"type": "text",
+						"value": "b999a06499c04556b217ed39801e5801"
+					},
+					{
+						"key": "User-Agent",
+						"type": "text",
+						"value": "Microsoft Genomics Command-line Client"
+					}
+				],
+				"url": {
+					"raw": "https://eastus.microsoftgenomics.net/api/workflows/10001",
+					"protocol": "https",
+					"host": [
+						"eastus",
+						"microsoftgenomics",
+						"net"
+					],
+					"path": [
+						"api",
+						"workflows",
+						"10001"
+					]
+				}
+			},
+			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
